@@ -48,6 +48,9 @@ class _RotacionInventarioScreenState extends State<RotacionInventarioScreen> {
               ),
             ],
           ),
+          const SizedBox(
+            height: 30,
+          ),
         ],
       ),
     );

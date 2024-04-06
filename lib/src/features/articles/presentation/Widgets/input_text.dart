@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class InputText extends StatelessWidget {
   final String hintText;
   final TextInputType textInputType;
+
   const InputText({
     Key? key,
     required this.hintText,
