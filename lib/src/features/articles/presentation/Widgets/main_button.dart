@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:snippet_coder_utils/FormHelper.dart';
+import 'package:production_app/src/features/articles/presentation/Pages/eoq_screen.dart';
 
 class MainButton extends StatelessWidget {
   const MainButton({super.key});
@@ -9,13 +9,21 @@ class MainButton extends StatelessWidget {
     return SafeArea(
       child: Column(
         children: [
-          FormHelper.submitButton(
-            'Ir',
-            () {},
-            btnColor: Theme.of(context).primaryColorLight,
-            borderColor: Theme.of(context).primaryColorLight,
-            txtColor: Colors.black,
-            fontSize: 28,
+          GestureDetector(
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const EOQScreen(),
+              ),
+            ),
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: const Text(
+                'Loading...',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
           ),
         ],
       ),
