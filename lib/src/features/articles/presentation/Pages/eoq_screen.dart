@@ -15,13 +15,13 @@ class _EOQScreenState extends State<EOQScreen> {
   final TextEditingController _sEditingController = TextEditingController();
   final TextEditingController _hEditingController = TextEditingController();
   bool _isLoading = false;
+  double response = 0;
 
-  int calculate(int d, int s, double h) {
+  void calculate(String d, String s, String h) {
     setState(() {
       _isLoading = true;
     });
-
-    return 0;
+    response = 0;
   }
 
   @override
@@ -88,11 +88,7 @@ class _EOQScreenState extends State<EOQScreen> {
           const SizedBox(
             height: 12,
           ),
-          FormHelper.submitButton(
-            'Cacular',
-            calculate(_dEditingController.text, _sEditingController.text,
-                _hEditingController.text),
-          ),
+          FormHelper.submitButton('Cacular', () {}),
         ],
       ),
     );
